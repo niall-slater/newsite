@@ -1,6 +1,30 @@
+/* GENERAL */
+
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: nixie, sans-serif;
+}
+
+@font-face {
+    font-family: "nixie";
+    src: url("../css/font_nixie.ttf");
+}
+
+@font-face {
+    font-family: "bebas";
+    src: url("../css/font_bebas.ttf");
+}
+
+@font-face {
+    font-family: "sui";
+    src: url("../css/font_sui.ttf");
+}
+
+h1 {
+    font-family: bebas;
+}
+h2 {
+    font-size: 1.2em;
 }
 
 .wrapper {
@@ -19,6 +43,7 @@ body {
 
 .header a {
     color: white;
+    text-decoration: none;
 }
 
 .header h1 {
@@ -34,6 +59,27 @@ body {
     overflow: auto;
 }
 
+.carouselItem {
+    padding-left: 15vw;
+    padding-right: 15vw;
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+.carouselItem img {
+    float: left;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
+    max-width: 25%;
+    margin-left: 2em;
+    margin-right: 2em;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 800ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
 .carouselItem img {
     float: left;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
@@ -48,6 +94,7 @@ body {
     display: flex;
     background-color: black;
     color: white;
+    flex-direction: row;
     justify-content: center;
     flex-wrap: nowrap;
 }
@@ -68,4 +115,46 @@ body {
 }
 .footerItem img {
     max-height: 20%;
+}
+
+/* HELPER CLASSES */
+
+/* Button stuff */
+.buttonWrapper {
+    margin: 2em;
+}
+
+.button {
+    text-align: center;
+    background-color: rgb(255, 126, 58);
+    padding: .7em;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .1s;
+    margin-top:50px;
+    font-family: sans-serif;
+}
+
+.button:hover {
+    background-color: rgb(255, 144, 86);
+}
+
+/* MEDIA QUERIES */
+
+/* Mobile */
+
+@media only screen and (max-width: 700px) {
+    .footer {
+        flex-direction: column;
+    }
+    .footerItem {
+        max-width: 90%;
+        font-size: 1.4em;
+    }
+    .footerItem img {
+        max-width: 40%;
+    }
 }
