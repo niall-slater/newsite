@@ -1,8 +1,9 @@
 /* GENERAL */
 
 body {
+    background-color: black;
     margin: 0;
-    font-family: nixie, sans-serif;
+    font-family: verdana, sans-serif;
 }
 
 @font-face {
@@ -20,11 +21,23 @@ body {
     src: url("../css/font_sui.ttf");
 }
 
+@font-face {
+    font-family: "lemon";
+    src: url("../css/LemonMilkLight.otf");
+}
+
 h1 {
-    font-family: bebas;
+    font-family: lemon;
+    font-weight: 200;
+}
+
+.carousel h1 {
+    font-weight: 200;
 }
 h2 {
+    font-family: nixie;
     font-size: 1.2em;
+    font-weight: 800;
 }
 
 .wrapper {
@@ -75,10 +88,6 @@ h2 {
     max-width: 25%;
     margin-left: 2em;
     margin-right: 2em;
-  -webkit-animation-name: spin;
-  -webkit-animation-duration: 800ms;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
 }
 .carouselItem img {
     float: left;
@@ -92,7 +101,6 @@ h2 {
 
 .footer {
     display: flex;
-    background-color: black;
     color: white;
     flex-direction: row;
     justify-content: center;
@@ -108,7 +116,7 @@ h2 {
 }
 
 .footerItem h1 {
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 .footerItem p {
     font-size: .9em;
