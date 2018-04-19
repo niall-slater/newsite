@@ -1,0 +1,132 @@
+/* Colours */
+
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', 'sans-serif';
+    
+    /* This is so that elements appearing offscreen (like the bees which slide in)
+    don't trigger the horizontal scrollbar.
+    */
+    overflow-x: hidden;
+}
+
+h1 {
+    margin-left: 12px;
+	color: #ffffff;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.52);
+	font-weight: 1200;
+}
+
+.listObject {
+	margin: 50px auto;
+	border-radius: 4px;
+	padding: 12px;
+    width: 50%;
+	background-color: #5ae6ff;
+	transition: 0.2s ease;
+}
+
+.listItem {
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.21); 
+	border-radius: 4px;
+	padding: 12px;
+    display: flex;
+	justify-content: flex-start;
+	flex-flow: row nowrap;
+    overflow: hidden;
+	margin: auto;
+	margin-bottom: 8px;
+	transition: .2s ease;
+}
+
+.listItem input {
+    /*
+    max-width: 30%;
+    margin-left: 1px;
+    margin-right: 1px;
+    */
+    
+    width: 20vw;
+}
+
+.itemBox {
+    width: 32px;
+    height: 32px;
+	margin: 4px; 
+}
+.itemTitle {
+    color: #333;
+    font-weight: 800;
+	margin: 12px;
+}
+
+.itemDesc {
+    color: black;
+	margin: 12px;
+}
+.itemConfirm {
+    width: 32px;
+    height: 32px;
+	margin: 4px;
+	margin-left: auto;
+}
+
+.addItemButton {
+    border-radius: 4px;
+    background-color: #5ae6ff;
+    color: #fff;
+    cursor: pointer;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.52);
+	font-size:.6em;
+	position:absolute;
+	top:44px;
+	right:32px;
+}
+
+.breadcrumb {
+    font-size: 1em;
+}
+
+.breadcrumb a {
+    color: #58a;
+	font-weight: 600;
+}
+
+.pixelatedImage {
+    image-rendering: pixelated;
+}
+
+.animated {
+    position: absolute;
+    right: -80px;
+    transition: linear;
+    z-index: 99;
+}
+
+/* MEDIA QUERIES */
+
+/*For mobile*/
+
+@media only screen and (max-width: 1024px) {
+	
+	.listObject {
+		width: 95%;
+		padding: 4px;
+		margin: 12px auto;
+        font-size: 1.2em;
+	}
+
+    .listItem {
+        flex-flow: row;
+        padding: 8px 4px 32px 4px;
+        margin: 4px;
+    }
+	
+	.addItemButton {
+		background-color: #fff;
+		text-shadow: none;
+		color: #333;
+	}
+
+}
