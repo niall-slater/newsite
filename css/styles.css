@@ -124,6 +124,21 @@ h2 {
 .footerItem img {
     max-height: 20%;
 }
+.quoteWrapper {
+    display: block;
+}
+.footerQuote {
+    margin: 2em;
+    margin-bottom: .2em;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #fff;
+}
+.footerAttribution {
+    margin: 1em;
+    float: right;
+    color: #ccc;
+}
 
 /* HELPER CLASSES */
 
