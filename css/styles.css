@@ -6,24 +6,26 @@ body {
     font-family: verdana, sans-serif;
 }
 
+/* Fonts */
+
 @font-face {
     font-family: "nixie";
-    src: url("../css/font_nixie.ttf");
+    src: url("../css/fonts/font_nixie.ttf");
 }
 
 @font-face {
     font-family: "bebas";
-    src: url("../css/font_bebas.ttf");
+    src: url("../css/fonts/font_bebas.ttf");
 }
 
 @font-face {
     font-family: "sui";
-    src: url("../css/font_sui.ttf");
+    src: url("../css/fonts/font_sui.ttf");
 }
 
 @font-face {
     font-family: "lemon";
-    src: url("../css/LemonMilkLight.otf");
+    src: url("../css/fonts/LemonMilkLight.otf");
 }
 
 h1 {
@@ -66,35 +68,20 @@ h2 {
 /* CAROUSEL */
 
 .carousel {
-    text-align: right;
-    background-image: linear-gradient(to right, #ddd, white);
+    text-align: center;
+    background-image: url("../images/carousel/background_nebula.jpg");
+    background-size: cover;
+	background-repeat: no-repeat;
     padding: 2em;
-    overflow: auto;
 }
 
 .carouselItem {
-    padding-left: 15vw;
-    padding-right: 15vw;
-}
-
-@keyframes spin {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(360deg);}
+	color: #ffffff;
 }
 
 .carouselItem img {
-    float: left;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
-    max-width: 25%;
-    margin-left: 2em;
-    margin-right: 2em;
-}
-.carouselItem img {
-    float: left;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25);
-    max-width: 25%;
-    margin-left: 2em;
-    margin-right: 2em;
+	height: 254px;
+	box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.67);
 }
 
 /* FOOTER */
@@ -133,6 +120,8 @@ h2 {
     font-size: 1.2em;
     font-style: italic;
     color: #fff;
+	width: 60vw;
+	text-align: center;
 }
 .footerAttribution {
     margin: 1em;
@@ -169,15 +158,20 @@ h2 {
 
 /* Mobile */
 
-@media only screen and (max-width: 700px) {
-    .footer {
-        flex-direction: column;
-    }
-    .footerItem {
-        max-width: 90%;
-        font-size: 1.4em;
-    }
-    .footerItem img {
-        max-width: 40%;
-    }
+@media only screen and (max-width: 1440px) {
+    
+}
+
+@media only screen and (max-width: 900px) {
+	.carouselItem {
+		width: 400px;
+		margin: auto;
+	}
+}
+
+/* ANIMATIONS */
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
 }
