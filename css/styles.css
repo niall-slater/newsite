@@ -77,11 +77,23 @@ h2 {
 
 .carouselItem {
 	color: #ffffff;
+	z-index: -1;
 }
 
-.carouselItem img {
+.itemImage img {
 	height: 254px;
 	box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.67);
+	position: fixed;
+	left: 50px;
+	top: 120px;
+	z-index: 0;
+}
+
+.itemDesc {
+	text-align: right;
+	position: relative;
+	z-index: 1;
+	text-shadow: 0px 0px 1px #000;
 }
 
 /* FOOTER */
@@ -158,14 +170,20 @@ h2 {
 
 /* Mobile */
 
-@media only screen and (max-width: 1440px) {
-    
+@media only screen and (min-width: 1440px) {
+	.carouselItem {
+		margin-right: 10vw;
+	}
+	.itemImage img {
+		margin-left: 20vw;
+	}
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
 	.carouselItem {
 		width: 400px;
 		margin: auto;
+		margin-right: 2%;
 	}
 }
 
