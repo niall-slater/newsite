@@ -160,6 +160,7 @@ h2 {
     transition: .1s;
     margin-top:50px;
     font-family: sans-serif;
+	text-shadow: none;
 }
 
 .button:hover {
