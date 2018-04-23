@@ -41,7 +41,15 @@ var quotes = [
     }
 ];
 
-var selectedQuote = quotes[Math.floor(Math.random()*quotes.length)];
+var selector = Math.floor(Math.random()*(quotes.length - 3));
 
-document.getElementById("quoteHolder").innerHTML = '<em>"' + selectedQuote.quote + '"</em>';
-document.getElementById("attributionHolder").innerHTML = selectedQuote.attribution;
+console.log(selector);
+
+var quoteHolders = document.getElementsByClassName("quoteHolder");
+var attributionHolders = document.getElementsByClassName("attributionHolder");
+
+for (var i = 0; i < 3; i++) {
+    var selectedQuote = quotes[selector + i];
+    quoteHolders[i].innerHTML = '<em>"' + selectedQuote.quote + '"</em>';
+    attributionHolders[i].innerHTML = selectedQuote.attribution;
+}
