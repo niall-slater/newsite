@@ -43,5 +43,5 @@ var quotes = [
 
 var selectedQuote = quotes[Math.floor(Math.random()*quotes.length)];
 
-document.getElementById("quoteHolder").innerHTML = '"' + selectedQuote.quote + '"';
+document.getElementById("quoteHolder").innerHTML = '<em>"' + selectedQuote.quote + '"</em>';
 document.getElementById("attributionHolder").innerHTML = selectedQuote.attribution;
