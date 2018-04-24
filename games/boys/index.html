@@ -1,48 +1,87 @@
-<!DOCTYPE html>
-<html>
-    
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Picking up Boys | Niall Slater</title>
-        <link rel="stylesheet" href="styles_games.css">
-        <meta name="description" content="Games by Niall Slater." />
-        <meta name="keywords" content="Niall,Slater,author,scifi">
-        <meta name="author" content="Niall Slater">
-        <meta property="og:image" content="images/author_pic.jpg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        <meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
-		
-		<link href="../game.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../favicon.ico">
 
+        <title>Websites | Niall Slater</title>
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+        <!-- Custom styles for this template -->
+        <link href="../game.css" rel="stylesheet">
     </head>
-    
-    <body> 
-        
-        <div class="tileWrapper">
 
-            <div class="gameWrapper main">
-                <div class="breadcrumb"><a href="/">Home</a> > <a href="/games">Games</a> > Picking up Boys</div>
-            </div>
-            
-            <div class="gameWrapper contrast">
-                <h3>Picking Up Boys</h3>
-                <p>Dodge asteroids and rescue astro-boys. </p>
-                <canvas class="game" id="Canvas_Catcher" width="256" height="128"></canvas>
-                <script src="catcher.js?1004"></script>
-                <p style="font-size:.5em;">(Use arrow keys, WASD or mouse.)</p>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">Niall Slater</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://unbound.com/books/the-second-death-of-daedalus-mole/updates" target="_blank">Updates</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../books">Books</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../websites">Websites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Subscriber Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main role="main">
+
+            <section class="jumbotron text-center">
+                <div class="container">
+                    <h1 class="jumbotron-heading">Picking Up Boys</h1>
+                    <p class="lead text-muted">Dodge asteroids and rescue astro-boys.</p>
+                </div>
+            </section>
+			
+			<div class="container game">
+			
+				<canvas class="scale2" id="Canvas_Catcher" width="256" height="128"></canvas>
+				<script src="catcher.js?1004"></script>
+				<p class="text-muted">(Use arrow keys, WASD or mouse.)</p>
 				<p>Your high score is:</p>
 				<h5 id="HSDcatcher">Loading highscore from cookie...</h5>
+			</div>
+			
+        </main>
+
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                </p>
             </div>
-            
+        </footer>
 
-        </div>
-        
-        
-
-        <div class="footer">
-            &#169; Niall Slater 2017
-        </div>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+        <script src="../../../../assets/js/vendor/popper.min.js"></script>
+        <script src="../../../../dist/js/bootstrap.min.js"></script>
+        <script src="../../../../assets/js/vendor/holder.min.js"></script>
     </body>
 </html>
