@@ -1,4 +1,6 @@
 var canvas = document.getElementById("Canvas_Catcher");
+canvas.style.backgroundColor = "#000";
+
 var ctx = canvas.getContext("2d");
 
 var debugText = "";
@@ -495,8 +497,8 @@ var updatePlay = function(modifier) {
     //Spawn neon rocks every so often)
     
     for (i = 0; i < asteroidsNeon.length; i++) {
-        asteroidsNeon[i].x -= modifier * 124;
-        asteroidsNeon[i].y += modifier * 124 * difficulty;
+        asteroidsNeon[i].x -= modifier * 82;
+        asteroidsNeon[i].y += modifier * 64 * difficulty;
         
         if (!debug) {
             if (Math.abs(asteroidsNeon[i].x - ship.x) < 12 && Math.abs(asteroidsNeon[i].y - ship.y) < 12) {
