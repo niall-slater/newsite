@@ -1,0 +1,117 @@
+[
+{
+	"name": "story_radiation",
+	"title": "ABNORMAL RADIATION READINGS",
+	"content": "Science department is reporting unusual radiation levels on the planet below.",
+	"options":
+	[{
+		"choice": "Send scouting party",
+		"diceRoll": true,
+		"winChance": 0.25,
+		"win": {
+			"response": "The scouts are gone for a long time. When they return, exhausted, they bring fifteen canisters of starship fuel!",
+			"effect" : {"resource_fuel" : 15}
+		},
+		"fail": {
+			"response": "The landing craft enters the ionosphere and immediately loses contact. You wait for hours, but they don't return.",
+			"effect" : {"resource_crew" : -8, "resource_happiness" : -15}
+		}
+	}, {
+		"choice": "Ignore the readings",
+		"diceRoll": false,
+		"response": "You broadcast a data packet in case it's of use to someone else. Time to move on.",
+		"effect": null
+	}]
+},
+{
+	"name": "story_fight",
+	"title": "ASSAULT ON BOARD",
+	"content": "Head of Security [NAME_SECURITY] takes you aside at breakfast. A junior engineer has seriously assaulted a colleague. There is no brig on board.",
+	"options":
+	[{
+		"choice": "Fire him out the airlock",
+		"diceRoll": true,
+		"winChance": 0.8,
+		"win": {
+			"response": "[NAME_SECURITY] nods and immediately leaves the mess hall. It's a hard decision, but you can't tolerate violence onboard.",
+			"effect" : {"resource_crew" : -1}
+		},
+		"fail": {
+			"response": "[NAME_SECURITY] leaves and, the next day, brings you the report of the incident. The perpetrator made a scene. Everyone knows.",
+			"effect" : {"resource_crew" : -1, "resource_happiness" : -20}
+		}
+	}, {
+		"choice": "Keep the incident under wraps",
+		"diceRoll": false,
+		"response": "[NAME_SECURITY] doesn't seem happy about it, but talks to the victim and convinces them to keep quiet. You transfer him to another department.",
+		"effect" : {"resource_happiness" : -5}
+	}]
+},
+{
+	"name": "story_riot",
+	"title": "SECURITY ALERT",
+	"content": "[NAME_SECURITY] buzzes you at lunch. Yelling to be heard, she tells you that a group of malcontents have started a riot in the mess hall. They've had enough travelling.",
+	"options":
+	[{
+		"choice": "Have [NAME_SECURITY] arrest them",
+		"diceRoll": true,
+		"winChance": 0.7,
+		"win": {
+			"response": "[NAME_SECURITY] moves officers in quickly and incapacitates the troublemakers. They end up spending a few days in the brig, and order is restored - if not peace.",
+			"effect" : {"resource_happiness" : -18}
+		},
+		"fail": {
+			"response": "[NAME_SECURITY] rushes in to quell the disturbance. The violence escalates and few people get out unscathed. This won't help.",
+			"effect" : {"resource_crew" : -3, "resource_happiness" : -39}
+		}
+	}, {
+		"choice": "Let [NAME_SECURITY] talk them down",
+		"diceRoll": true,
+		"winChance": 0.2,
+		"win": {
+			"response": "[NAME_SECURITY] offers an increase in food rations and more flexibility in work shifts. A dialogue is opened, and eventually the troublemakers settle down, relieved to have been listened to.",
+			"effect" : {"resource_happiness" : 24}
+		},
+		"fail": {
+			"response": "[NAME_SECURITY] hangs up and, from what you can piece together later, tries to convince them of their folly. It doesn't go well. Medbay fills up, but at least nobody died.",
+			"effect" : {"resource_happiness" : -17}
+		}
+	}]
+},
+{
+	"name": "story_spaceWalk",
+	"title": "PERSONAL ALARM TRIGGERED",
+	"content": "A member of the maintenance team has suffered an O2 tank puncture while cleaning the solar array, and now they're being propelled into space. Soon they'll be too far gone to retrieve.",
+	"options":
+	[{
+		"choice": "Send someone after them",
+		"diceRoll": true,
+		"winChance": 0.4,
+		"win": {
+			"response": "[NAME_SECURITY] volunteers to go and you know better than to argue. Fifteen minutes later they've both been reeled back in, and the bridge everyone breathes a collective sigh of relief.",
+			"effect" : {"resource_happiness" : 12}
+		},
+		"fail": {
+			"response": "An intern volunteers and you reluctantly let them go. They make the leap and manage to thrust close enough to latch on - but then the O2 tank ruptures and sends them both spinning into the dark, too fast to catch.",
+			"effect" : {"resource_crew" : -2, "resource_happiness" : -13}
+		}
+	}, {
+		"choice": "Send a team after them",
+		"diceRoll": true,
+		"winChance": 0.8,
+		"win": {
+			"response": "[NAME_SECURITY] assembles a team of five and leads them out into the dark. [NAME_PILOT] adjusts the ship's orientation slightly and keeps the team in range long enough for everyone to come back safe.",
+			"effect" : {"resource_happiness" : 14, "resource_fuel" : -3}
+		},
+		"fail": {
+			"response": "[NAME_SECURITY] sends a team out. It looks like they're going to pull back with no trouble, but then another rogue micrometeorite strikes. There's an O2 explosion, and when the debris clears you can't find anyone.",
+			"effect" : {"resource_happiness" : -30, "resource_crew" : -5}
+		}
+	}, {
+		"choice": "Don't send anyone",
+		"diceRoll": false,
+		"response": "[NAME_PILOT] tries to argue, but you've made your decision. You can't risk anyone else. [NAME_ENGINEER] keeps the channel open so you have to listen as the maintenance officer drifts away, alone.",
+		"effect" : {"resource_crew" : -1, "resource_happiness" : -21}
+	}]
+}
+]

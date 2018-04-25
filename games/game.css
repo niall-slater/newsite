@@ -17,9 +17,12 @@ canvas, img {
 
 .game {
 	margin: auto;
-	text-align: center;
 }
 
 .jumbotron {
 	padding-bottom: .5em;
+}
+
+#game {
+    width: 512px;
 }

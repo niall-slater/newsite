@@ -1,0 +1,178 @@
+[
+{
+	"name": "danger_asteroids",
+	"dangerType": "ASTEROIDS",
+	"title": "ASTEROID FIELD DETECTED",
+	"content": "Our short-range sensors have picked up an asteroid field nearby. Might be some useful minerals in there.",
+	"options":
+	[{
+		"choice": "Attempt mining",
+		"diceRoll": true,
+		"winChance": 0.5,
+		"win": {
+			"response": "You send a scout ship with utility lasers to carve out some ore. Once they're done you process it into fuel!",
+			"effect" : {"resource_fuel" : 5}
+		},
+		"fail": {
+			"response": "You send a scout ship to carve out some ore. A micrometeorite swipes it out of existence, taking the crew with it.",
+			"effect" : {"resource_crew" : -4, "resource_happiness" : -10}
+		}
+	}, {
+		"choice": "Leave it, too dangerous",
+		"diceRoll": false,
+		"response": "You leave the asteroids where they are. Can't risk damage to the ship."
+	}]
+},
+{
+	"name": "danger_micrometeorites",
+	"dangerType": "ASTEROIDS",
+	"title": "MICROMETEORITE BARRAGE",
+	"content": "You can make out a sound like hail falling on a metal roof. Navigation Officer [NAME_NAVIGATOR] says you've jumped right into a debris field.",
+	"options":
+	[{
+		"choice": "Trust your pilot",
+		"diceRoll": true,
+		"winChance": 0.8,
+		"win": {
+			"response": "[NAME_PILOT] threads the needle, pulling you out of the path of the bigger fragments. You take a few hits, but the ship survives.",
+			"effect" : {"resource_hull" : -4}
+		},
+		"fail": {
+			"response": "[NAME_PILOT] opens the throttle and tries to power through the field. A metal shard looms out of the darkness. [NAME_PILOT] is fast, but not fast enough. You pull through. Barely.",
+			"effect" : {"resource_hull" : -25, "resource_fuel" : -5}
+		}
+	}, {
+		"choice": "Raise emergency shield",
+		"diceRoll": false,
+		"response": "Chief Engineer [NAME_ENGINEER] diverts power to the emergency shield. It screeches into life and drains the fuel cells. The storm continues, but the hull holds.",
+		"effect" : {"resource_fuel" : -25}
+	}]
+},
+{
+	"name": "danger_bigAsteroid",
+	"dangerType": "ASTEROIDS",
+	"title": "LARGE OBJECT DETECTED",
+	"content": "Moments after you arrive, [NAME_NAVIGATOR] hits the alarm. That small speck in the distance is growing, fast. [NAME_ENGINEER] and [NAME_PILOT] both yell from their seats, pushing alerts to your screen.",
+	"options":
+	[{
+		"choice": "Trust [NAME_PILOT], take evasive action",
+		"diceRoll": true,
+		"winChance": 0.5,
+		"win": {
+			"response": "[NAME_PILOT] jettisons two fuel banks for speed and yanks the ship around, firing the main engine. You just pull away as the object clips off the aft comm tower. It's bad, but the ship survives.",
+			"effect" : {"resource_fuel" : -15, "resource_hull" : -12, "resource_crew" : -3}
+		},
+		"fail": {
+			"response": "[NAME_PILOT] guns the retros and pulls the ship backwards, tilting away from the path of the object. Not fast enough - it tears through the lower decks. You seal the breach, but losses are high.",
+			"effect" : {"resource_hull" : -65, "resource_crew" : -63}
+		}
+	}, {
+		"choice": "Trust [NAME_ENGINEER], raise impact shield",
+		"diceRoll": true,
+		"winChance": 0.5,
+		"win": {
+			"response": "[NAME_ENGINEER] cuts the power to everything except the forward shield. The bridge goes pitch-black and silent. When the asteroid hits it shatters into a thousand pieces, dealing minimal damage.",
+			"effect" : {"resource_fuel" : -35, "resource_hull" : -2}
+		},
+		"fail": {
+			"response": "[NAME_ENGINEER] raises the forward shield. You sit in silence as the object approaches, holding your ground - it strikes you head-on. The rock breaks in half, but fractures the hull badly.",
+			"effect" : {"resource_hull" : -45, "resource_fuel" : -25}
+		}
+	}]
+},
+{
+	"name": "danger_storm",
+	"dangerType": "ION",
+	"title": "ION STORM",
+	"content": "A panel lights up on the bridge. Moments later a warning comes through from belowdecks - you've jumped right into a cloud of ionised gas.",
+	"options":
+	[{
+		"choice": "Try to boost away",
+		"diceRoll": true,
+		"winChance": 0.45,
+		"win": {
+			"response": "[NAME_PILOT] hits the afterburner and the ship lurches out of danger. Close one.",
+			"effect" : {"resource_fuel" : -5}
+		},
+		"fail": {
+			"response": "[NAME_PILOT] floors it, but the cloud is huge. The shield soaks up most of the damage, but ion interference causes it to score the hull badly.",
+			"effect" : {"resource_fuel" : -5, "resource_hull" : -12}
+		}
+	}, {
+		"choice": "Lockdown systems and stay put",
+		"diceRoll": true,
+		"winChance": 0.85,
+		"win": {
+			"response": "[NAME_ENGINEER] flips the shield to static mode and [NAME_PILOT] kills the engines. You ride it out with minimal damage.",
+			"effect" : {"resource_hull" : -2}
+		},
+		"fail": {
+			"response": "[NAME_ENGINEER] locks down all systems, but after hours of bombardment the heating system overloads and causes an explosion in the mess hall. [NAME_ENGINEER] barely manages to contain the damage.",
+			"effect" : {"resource_crew" : -3, "resource_hull" : -16}
+		}
+	}]
+},
+{
+	"name": "danger_miningDrones",
+	"dangerType": "MILITARY",
+	"title": "INCOMING DRONES",
+	"content": "You drop into a system full of old mining drones, leftover from colonial days. The further you go, the more of them blink into life and turn to watch your progress.",
+	"options":
+	[{
+		"choice": "Tell [NAME_PILOT] to floor it, fast",
+		"diceRoll": true,
+		"winChance": 0.75,
+		"win": {
+			"response": "[NAME_PILOT] diverts all power to engines. The hull scrapes and screeches as drones bounce away, unable to get a purchase. After ten minutes you get out of range and the sound suddenly dies away.",
+			"effect" : {"resource_fuel" : -5}
+		},
+		"fail": {
+			"response": "[NAME_PILOT] tries, but one drone clamps onto the top deck and starts drilling into the hull. [NAME_ENGINEER] manages to cycle the power and demagnetise it. It detaches and floats away, helpless.",
+			"effect" : {"resource_fuel" : -3, "resource_hull" : -4}
+		}
+	}, {
+		"choice": "Tell [NAME_PILOT] to ignore them",
+		"diceRoll": true,
+		"winChance": 0.3,
+		"win": {
+			"response": "[NAME_PILOT] nods and holds the ship on a steady course. Everyone on the bridge is jumpy, but the drones just watch you go by. It's quiet."
+		},
+		"fail": {
+			"response": "There's a screech as one drone scores a gouge in the hull, then another, and another. [NAME_PILOT] panics, but [NAME_ENGINEER] quickly overloads the shield, knocking the drones out of commission.",
+			"effect" : {"resource_hull" : -8, "resource_fuel" : -12}
+		}
+	}]
+},
+{
+	"name": "danger_powerFailure",
+	"dangerType": "ION",
+	"title": "[##UNDEFINED FAILURE]",
+	"content": "####EXCEPTION.E0x00310####SYSTEMFAILURE\n#CPU\n#POWER\n#OVERFLOW",
+	"options":
+	[{
+		"choice": "Call for [NAME_ENGINEER]",
+		"diceRoll": true,
+		"winChance": 0.8,
+		"win": {
+			"response": "[NAME_ENGINEER] rushes to the main terminal, swearing, and disconnects the secondary battery. Your screen flashes and blacks out, then slowly starts up again. Looks like it's back to normal.",
+			"effect" : {"resource_happiness" : 2}
+		},
+		"fail": {
+			"response": "[NAME_ENGINEER] sends an assistant to restart the computer core. You soon hear a distant bang. The computers come back online, but engineering reports that the secondary battery exploded. The assistant didn't make it.",
+			"effect" : {"resource_hull" : -2, "resource_crew" : -1}
+		}
+	}, {
+		"choice": "Reboot the terminal",
+		"diceRoll": true,
+		"winChance": 0.1,
+		"win": {
+			"response": "You're no expert, so you give the terminal a kick. It comes back online. There is a smattering of applause on the bridge.",
+			"effect" : {"resource_happiness" : 5}
+		},
+		"fail": {
+			"response": "You're no expert, so you give the terminal a kick. It comes back online, but five minutes later there's an explosion belowdecks.",
+			"effect" : {"resource_hull" : -27, "resource_crew" : -23}
+		}
+	}]
+}
+]

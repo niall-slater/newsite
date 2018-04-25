@@ -43,8 +43,6 @@ var quotes = [
 
 var selector = Math.floor(Math.random()*(quotes.length - 3));
 
-console.log(selector);
-
 var quoteHolders = document.getElementsByClassName("quoteHolder");
 var attributionHolders = document.getElementsByClassName("attributionHolder");
 
