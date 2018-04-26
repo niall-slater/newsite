@@ -1,0 +1,433 @@
+body {
+	font-family: Montserrat, sans-serif;
+	background-color: #eaf9ff;
+    background-image: url("../img/london.jpg");
+    background-position: top;
+    background-size: cover;
+}
+
+.breadcrumb a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.card {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    margin: 2% auto;
+    padding: .5em 2em;
+    transition: .3s ease;
+}
+
+.card h1 {
+    font-size: 2.5em;
+    font-weight: 1200;
+}
+
+.card h2 {
+    font-size: 1.5em;
+}
+
+
+.card h3 {
+    margin-bottom: 0px;
+    margin-top: 1.5em;
+}
+
+.imageWrapper {
+    display: flex;
+    flex-flow: wrap;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.promoImage {
+    width: 40%;
+    height: 40%;
+    transition: .2s ease;
+    margin: 12px;
+}
+
+.promoImage img {
+    margin: 12px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    transition: .2s ease;
+    border: 1px solid #ccc;
+}
+
+.promoImage:hover img{
+    width: 100%;
+    box-shadow: -2px 2px 10px #aaa;
+    transform: scale(1.1);
+}
+.promoTitle {
+    opacity: 1;
+    text-align: center;
+    transition: ease .3s;
+    font-weight: 800;
+	font-size: 1.2em;
+    margin: 0% 5% 0% 12%;
+	margin-bottom: 0px;
+    color: black;
+    height: 40px;
+}
+
+.promoLabel {
+    opacity: 0;
+    text-align: center;
+    transition: ease .3s;
+    font-weight: 800;
+    color: grey;
+    height: 40px;
+    margin: 0% 5% 0% 12%;
+}
+
+.mobileLabel {
+    display: none;
+}
+
+.promoImage:hover .promoLabel {
+    opacity: 1;
+    height: 40px;
+}
+
+.contactDetails {
+    color: white;
+    background-color: rgba(90, 90, 90, 0.75);
+    height: 110%;
+    width: 300px;
+    margin: -10px;
+    position: fixed;
+    left: -280px;
+    top: 0px;
+    transition: ease .25s;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.contactDetails h2 {
+    transform: rotate(90deg);
+    transform-origin: left;
+    margin-left: 98%;
+    margin-top: 5%;
+    margin-bottom: -14px;
+}
+.contactDetails a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+.contactDetails img {
+    height: 32px;
+    vertical-align: middle;
+    margin: 0px 12px 0px 0px;
+}
+.contactDetails h1 {
+    line-height: .3em;
+}
+
+.contactDetails:hover {
+    left: 0px;
+}
+
+.skills {
+    color: white;
+    background-color: rgba(90, 90, 90, 0.75);
+    height: 110%;
+    width: 300px;
+    margin: -10px;
+    position: fixed;
+    top: 0px;
+    padding-left: 1em;
+    padding-right: 1em;
+    left: 0px;
+    transition: ease .25s;
+}
+.skills a {
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    color: #eee;
+}
+.skills h1 {
+    font-size: 1.4em;
+    line-height: .1em;
+}
+.skills h2 {
+	text-align: left;
+	margin: 6%;
+    margin-top: 20%;
+}
+.skills h3 {
+    font-size: 1.4em;
+    margin-left: 10%;
+    font-weight: 200;
+}
+.skills p {
+    font-size: 1em;
+    font-weight: 200;
+    color: #ddd;
+    margin-left: 10%;
+}
+.skills ul {
+    font-size: 1.2em;
+    font-weight: 200;
+    color: #ddd;
+    line-height: 1.4em;
+    transition: ease .25s;
+}
+
+.gitHub {
+    color: white;
+    background-color: rgba(90, 90, 90, 0.75);
+    height: 110%;
+    width: 300px;
+    margin: -10px;
+    position: fixed;
+    right: -280px;
+    top: 0px;
+    transition: ease .25s;
+    padding-left: 1em;
+    padding-right: 1em;
+    right: 0px;
+}
+.gitHub a {
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    color: #eee;
+}
+.gitHub h1 {
+    font-size: 1.4em;
+    line-height: .1em;
+}
+.gitHub h2 {
+	text-align: right;
+	margin: 6%;
+}
+.github h3 {
+    margin-left: 10%;
+}
+.gitHub p {
+    font-size: 1em;
+    font-weight: 200;
+    color: #ddd;
+    margin-left: 10%;
+}
+
+.gitHub img {
+    height: 32px;
+    vertical-align: middle;
+    margin: 0px 12px 0px 0px;
+}
+
+.gitHub:hover {
+    right: 0px;
+}
+.gitHub .repo {
+    transition: .2s ease;
+    border: 2px solid #888;
+    border-radius: 2px;
+    margin-top: 14px;
+    margin-bottom: 14px;
+    padding: 6px;
+    margin-left: 10%;
+    background-color: rgba(90, 90, 90, 0.75);
+}
+
+.gitHub .repo:hover {
+    border: 2px dashed #fff;
+    text-align: left;
+    background-color: #298495;
+    margin-left: 5%;
+	margin-right: 5%;
+}
+
+.mobileFooter {
+    display: none;
+    font-weight: 800;
+    color: white;
+    background-color: #5a5a5a;
+    transition: ease .2s;
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+.mobileFooter a {
+    color: white;
+    text-decoration: none;
+    font-weight: 800;
+}
+.mobileFooter img {
+    height: 32px;
+    vertical-align: middle;
+    margin: 0px 12px 0px 0px;
+}
+.mobileFooter h1 {
+    line-height: .3em;
+}
+
+.experience {
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.26);
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.51);
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.experience ul{
+    line-height: 1.5em;
+}
+.experience li{
+    margin-top: .4em;
+}
+
+.experience h1 {
+    margin-top: 0px;
+    font-size: 1.5em;
+}
+
+.experience h2 {
+    font-size: 1.2em;
+}
+
+.experience h3 {
+    font-size: 1em;
+    text-align: left;
+}
+
+/* MEDIA QUERIES */
+
+/*For mobile*/
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1400px) {
+    .card {
+        width: 60%;
+		margin-left: 2%;
+    }
+	
+	.gitHub h1 {
+		font-size: 1em;
+	}
+    
+    .skills {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+	
+	.gitHub p {
+		font-size: .85em;
+	}
+	.gitHub a {
+		font-size: .7em;
+	}
+	.gitHub img {
+		height: 14px;
+	}
+    
+    .skills h2 {
+        margin-top: 10%;
+    }
+    .skills ul {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+	body {
+        font-family: Montserrat, sans-serif;
+    }
+    
+    .card {
+        width: 80%;
+    }
+    
+    .card h2 {
+        font-size: 1.2em;
+        width: 80%;
+    }
+    
+    .gitHub {
+        display:none;
+    }
+    
+    .contactDetails {
+        display:none;
+    }
+    
+    .imageWrapper {
+        width: 100%;
+    }
+    
+    .promoImage {
+        width: 100%;
+    }
+
+    .promoImage:hover img{
+        width: 100%;
+    }
+
+    .promoImage .promoTitle {
+        display: none;
+    }
+
+    .promoImage .promoLabel {
+        opacity: 1;
+        font-size: 1em;
+        height: 40px;
+        color: #333;
+    }
+
+    .mobileLabel {
+        display: block;
+        text-align: center;
+        font-size:.8em; 
+        padding: 10px 4px;
+        margin: 14px auto; 
+        background-color: #24292E;
+        color:#fff;
+        border-radius:4px;
+        box-shadow: 2px 2px 0px 1px rgb(22, 25, 28);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        transition: ease .3s;
+    }
+    
+    .mobileLabel:hover {
+        background-color: #41464b;
+    }
+    
+    .mobileLabel img {
+        width: 16px;
+        height: 16px;
+        margin: 0px 12px 0px 4px;
+        vertical-align: sub;
+    }
+    
+    .mobileLabel a {
+        color: #fff;
+    }
+    
+    .mobileFooter {
+        display: block;
+        background-color: rgba(47, 50, 54, 0.75);
+        padding-top: 2px;
+        margin-left: -8px;
+        margin-right: -8px;
+        box-shadow: 0px 500px 0px 500px rgba(47, 50, 54, 0.75);
+    }
+    
+    .skills {
+        display: none;
+    }
+}
